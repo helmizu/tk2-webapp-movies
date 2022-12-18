@@ -19,7 +19,7 @@ const Film = ({ image = "", title = "", score = 0, year = 0 }: iFilmProps) => {
           <img src={image} alt="banner" className="card-img-top img-fluid max-h-72 h-[100%] aspect-[3/4]" />
         </div>
         <div className="card-body">
-          <div className="text-end mb-2">{emote} {score}/<small className="align-top">10</small></div>
+          <div className="text-end mb-2">{emote} {score.toFixed(1)}/<small className="align-top">10</small></div>
           <p>
             <span className="fw-semibold">{title}</span>
             <br />

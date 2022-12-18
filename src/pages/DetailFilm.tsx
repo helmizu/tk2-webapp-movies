@@ -37,7 +37,7 @@ const DetailFilm = () => {
           <div className="card text-center w-fit bg-[#D9D9D91A] border-[#A41B1B] mt-8">
             <div className="card-body">
               <h5>Score</h5>
-              <h3 className="text-[#A41B1B]">{score}</h3>
+              <h3 className="text-[#A41B1B]">{Number(score).toFixed(1)}</h3>
             </div>
           </div>
           <div className="mt-8">
