@@ -14,5 +14,5 @@ export const sortObjectByField = (key: string, sortBy: '' | 'asc' | 'desc') => (
 }
 
 export const getArrayStringUnique = (values: string[]) => {
-  return values.filter((value, index, self) => self.indexOf(value.trim()) === index) 
+  return values.filter((value, index, self) => self.indexOf(value.trim()) === index)
 }

@@ -24,10 +24,10 @@ const DetailFilm = () => {
   return (
     <Layout>
       <div className="d-flex align-items-start justify-content-start pb-8">
-        <div className="h-100">
-          <img src={image} className="img-fluid rounded" alt="banner" />
+        <div className="w-[660px]">
+          <img src={image} className="rounded" width="100%" alt="banner" />
         </div>
-        <div className="px-8">
+        <div className="px-10">
           <h2 className="inline-block">{title}</h2> <span className="fw-light fs-2">({year})</span>
           <p><span className="text-capitalize">{convertCategory(category)}</span> • {duration}</p>
           <div className="mt-8">
