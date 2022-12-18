@@ -15,6 +15,8 @@ const mockData = {
   duration: '2h 11m'
 }
 
+const convertCategory = (cat: string) => cat.split('/').join(', ')
+
 const DetailFilm = () => {
   const { slug = '' } = useParams();
   const data = dataFilm.find((film) => convertToSlug(film.title) === slug) || null;
@@ -27,7 +29,7 @@ const DetailFilm = () => {
         </div>
         <div className="px-8">
           <h2 className="inline-block">{title}</h2> <span className="fw-light fs-2">({year})</span>
-          <p>{category} • {duration}</p>
+          <p><span className="text-capitalize">{convertCategory(category)}</span> • {duration}</p>
           <div className="mt-8">
             <h5>Synopsis</h5>
             <p>{synopsis}</p>

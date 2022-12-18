@@ -42,7 +42,14 @@ const ListFilm = () => {
           <h3>Popular movies right now</h3>
           <div className="d-flex flex-row justify-content-between align-items-center">
             <span>Sort by</span>
-            <select className="btn btn-sm btn-secondary rounded-pill ms-3" value={sort} onChange={(e: any) => setSort(e.target.value)}>
+            <select
+              className={!!sort ? 
+                "btn btn-sm btn-secondary rounded-pill ms-3 focus-visible:shadow-none  bg-red-800 border-red-800" :
+                "btn btn-sm btn-secondary rounded-pill ms-3 focus-visible:shadow-none"
+              }
+              value={sort}
+              onChange={(e: any) => setSort(e.target.value)}
+            >
               <option value="">Default</option>
               <option value="asc">A-Z</option>
               <option value="desc">Z-A</option>
